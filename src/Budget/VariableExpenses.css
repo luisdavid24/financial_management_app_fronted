@@ -1,0 +1,41 @@
+.expense-box {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.form input {
+  margin: 5px;
+  padding: 8px;
+  width: 200px;
+}
+
+.btnAddVariableExpenses {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btnAddVariableExpenses:hover {
+  background-color: #218838;
+}
+
+.expense-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.expense-table th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.expense-table th {
+  background-color: #4caf50;
+  color: white;
+}
