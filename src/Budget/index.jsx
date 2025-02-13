@@ -23,10 +23,7 @@ export default function Budget() {
   return (
     <div className="containerBudget">
       <h2>Mensaje desde el Backend:</h2>
-
-      {data.map((categoryData) => (
-        <Category key={categoryData.id} name={categoryData.name} />
-      ))}
+      <Category />
     </div>
   );
 }

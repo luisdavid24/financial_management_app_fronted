@@ -1,10 +1,11 @@
 import React from "react";
+import AssetsTable from "./AssetsTable.jsx";
 import "./Category.css";
 
-export default function Category({ name }) {
+export default function Category() {
   return (
     <div className="budget-box">
-      <h2>{name}</h2>
+      <AssetsTable />
     </div>
   );
 }
