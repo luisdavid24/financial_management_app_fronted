@@ -5,6 +5,7 @@ import VariableExpenses from "./VariableExpenses.jsx";
 import FinanceTable from "./FinanceTable.jsx";
 import Debts from "./Debts.jsx";
 import Donations from "./Donations.jsx";
+import UnforeseenEvents from "./UnforeseenEvents.jsx";
 import "./css/Category.css";
 
 export default function Category() {
@@ -15,7 +16,8 @@ export default function Category() {
       <VariableExpenses /> */}
       {/* <FinanceTable /> */}
       {/*  <Debts /> */}
-      <Donations />
+      {/* <Donations /> */}
+      <UnforeseenEvents />
     </div>
   );
 }
