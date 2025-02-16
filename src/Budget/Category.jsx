@@ -6,6 +6,7 @@ import FinanceTable from "./FinanceTable.jsx";
 import Debts from "./Debts.jsx";
 import Donations from "./Donations.jsx";
 import UnforeseenEvents from "./UnforeseenEvents.jsx";
+import Tax from "./Tax.jsx";
 import "./css/Category.css";
 
 export default function Category() {
@@ -17,7 +18,8 @@ export default function Category() {
       {/* <FinanceTable /> */}
       {/*  <Debts /> */}
       {/* <Donations /> */}
-      <UnforeseenEvents />
+      {/* <UnforeseenEvents /> */}
+      <Tax />
     </div>
   );
 }
