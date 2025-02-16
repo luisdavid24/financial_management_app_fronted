@@ -2,14 +2,16 @@ import React from "react";
 import AssetsTable from "./AssetsTable.jsx";
 import FixedCostsTable from "./FixedCostsTable.jsx";
 import VariableExpenses from "./VariableExpenses.jsx";
+import FinanceTable from "./FinanceTable.jsx";
 import "./css/Category.css";
 
 export default function Category() {
   return (
     <div className="budget-box">
-      <AssetsTable />
+      {/*   <AssetsTable />
       <FixedCostsTable />
-      <VariableExpenses />
+      <VariableExpenses /> */}
+      <FinanceTable />
     </div>
   );
 }
