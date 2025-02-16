@@ -7,19 +7,21 @@ import Debts from "./Debts.jsx";
 import Donations from "./Donations.jsx";
 import UnforeseenEvents from "./UnforeseenEvents.jsx";
 import Tax from "./Tax.jsx";
+import Goals from "./Goals.jsx";
 import "./css/Category.css";
 
 export default function Category() {
   return (
     <div className="budget-box">
-      {/*   <AssetsTable />
+      <AssetsTable />
       <FixedCostsTable />
-      <VariableExpenses /> */}
-      {/* <FinanceTable /> */}
-      {/*  <Debts /> */}
-      {/* <Donations /> */}
-      {/* <UnforeseenEvents /> */}
+      <VariableExpenses />
+      <FinanceTable />
+      <Debts />
+      <Donations />
+      {<UnforeseenEvents />}
       <Tax />
+      <Goals />
     </div>
   );
 }
