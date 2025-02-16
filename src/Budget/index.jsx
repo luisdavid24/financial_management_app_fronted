@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Category from "./Category";
-import "./Budget.css";
+import "./css/Budget.css";
 
 export default function Budget() {
   const [data, setData] = useState([]);

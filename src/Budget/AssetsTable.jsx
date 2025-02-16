@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 
-import "./Category.css";
+import "./css/AssetsTable.css";
 
 export default function AssetsTable() {
   const [assets, setAssets] = useState([
@@ -61,7 +61,7 @@ export default function AssetsTable() {
   return (
     <div className="budget-box">
       <h2>Gestión de Activos</h2>
-      <div className="form">
+      <div className="formAssetsTable">
         <input
           type="text"
           name="name"
@@ -90,7 +90,9 @@ export default function AssetsTable() {
           value={newAsset.availableBalance}
           onChange={handleChange}
         />
-        <button onClick={addAsset}>Agregar Activo</button>
+        <button className="btnAssetsTable" onClick={addAsset}>
+          Agregar Activo
+        </button>
       </div>
 
       <table className="paleBlueRows">

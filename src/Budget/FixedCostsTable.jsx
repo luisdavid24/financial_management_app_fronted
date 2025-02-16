@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
-import "./FixedCostsTable.css";
+import "./css/FixedCostsTable.css";
 
 export default function FixedCostsTable() {
   const [expenses, setExpenses] = useState([

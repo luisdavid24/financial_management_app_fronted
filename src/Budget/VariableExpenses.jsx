@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
-import "./VariableExpenses.css";
+import "./css/VariableExpenses.css";
 
 export default function VariableExpenses() {
   const [expenses, setExpenses] = useState([
