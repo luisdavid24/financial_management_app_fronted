@@ -4,6 +4,7 @@ import FixedCostsTable from "./FixedCostsTable.jsx";
 import VariableExpenses from "./VariableExpenses.jsx";
 import FinanceTable from "./FinanceTable.jsx";
 import Debts from "./Debts.jsx";
+import Donations from "./Donations.jsx";
 import "./css/Category.css";
 
 export default function Category() {
@@ -13,7 +14,8 @@ export default function Category() {
       <FixedCostsTable />
       <VariableExpenses /> */}
       {/* <FinanceTable /> */}
-      <Debts />
+      {/*  <Debts /> */}
+      <Donations />
     </div>
   );
 }
