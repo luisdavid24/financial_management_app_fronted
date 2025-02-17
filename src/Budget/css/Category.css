@@ -1,41 +1,54 @@
-.budget-box {
-  width: 80%;
-  margin: auto;
-  text-align: center;
+.containerCategory {
+  border: 1px solid red;
+  padding-top: 750px;
 }
 
+.containerIconCategory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.tableCategory {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f3e8ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableCategory thead {
+  background-color: #7b2cbf;
+  color: white;
+}
+
+.tableCategory th,
+.tableCategory td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #d6b3ff;
+}
+
+.tableCategory tbody tr:hover {
+  background-color: #e0c3fc;
+}
+
+.tableCategory td {
+  color: #4a148c;
+}
+
+.tableCategory td svg {
+  cursor: pointer;
+  font-size: 18px;
+  color: #7b2cbf;
+  margin-right: 8px;
+}
+
+.tableCategory td svg:hover {
+  color: #4a148c;
+}
 .form input {
   margin: 5px;
   padding: 8px;
   width: 200px;
-}
-
-button {
-  padding: 8px 12px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin: 5px;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-th {
-  background-color: #4caf50;
-  color: white;
 }

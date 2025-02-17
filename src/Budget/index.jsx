@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Category from "./Category";
-import "./css/Budget.css";
 
 export default function Budget() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+  /*  useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch("http://localhost:3001/api/v1/categoryRouter");
@@ -18,7 +17,7 @@ export default function Budget() {
     };
 
     fetchData();
-  }, []);
+  }, []); */
 
   return (
     <div className="containerBudget">

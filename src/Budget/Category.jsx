@@ -12,14 +12,14 @@ import "./css/Category.css";
 
 export default function Category() {
   return (
-    <div className="budget-box">
+    <div className="containerCategory">
       <AssetsTable />
       <FixedCostsTable />
       <VariableExpenses />
       <FinanceTable />
       <Debts />
       <Donations />
-      {<UnforeseenEvents />}
+      <UnforeseenEvents />
       <Tax />
       <Goals />
     </div>

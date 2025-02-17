@@ -1,25 +1,13 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
-import "./css/FinanceTable.css";
 
 export default function Tax() {
   return (
     <div>
       <h2>Tax</h2>
 
-      <div className="form">
-        <input type="text" name="name" placeholder="Nombre del gasto" />
-        <input
-          type="text"
-          name="category"
-          placeholder="Categoría (Ej: Vivienda, Transporte...)"
-        />
-        <input type="number" name="amount" placeholder="Monto ($)" />
-        <button>Agregar inversion o Ahorro</button>
-      </div>
-
-      <table className="expense-table">
+      <table className="tableCategory">
         <thead>
           <tr>
             <th>Nombre</th>

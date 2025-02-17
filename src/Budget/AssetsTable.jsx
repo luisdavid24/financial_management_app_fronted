@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
-
-import "./css/AssetsTable.css";
+import { MdOutlineAddCircle } from "react-icons/md";
 
 export default function AssetsTable() {
   const [assets, setAssets] = useState([
@@ -27,7 +26,6 @@ export default function AssetsTable() {
     availableBalance: "",
   });
 
-  // Manejar cambios en el formulario
   const handleChange = (e) => {
     setNewAsset({ ...newAsset, [e.target.name]: e.target.value });
   };
@@ -60,42 +58,12 @@ export default function AssetsTable() {
 
   return (
     <div className="budget-box">
-      <h2>Gestión de Activos</h2>
-      <div className="formAssetsTable">
-        <input
-          type="text"
-          name="name"
-          placeholder="Nombre del Activo"
-          value={newAsset.name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="type"
-          placeholder="Tipo (Banco, Inversión...)"
-          value={newAsset.type}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="initialBalance"
-          placeholder="Saldo Inicial"
-          value={newAsset.initialBalance}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="availableBalance"
-          placeholder="Saldo Disponible"
-          value={newAsset.availableBalance}
-          onChange={handleChange}
-        />
-        <button className="btnAssetsTable" onClick={addAsset}>
-          Agregar Activo
-        </button>
+      <div className="containerIconCategory">
+        <h2>Gestión de Activos</h2>
+        <MdOutlineAddCircle />
       </div>
 
-      <table className="paleBlueRows">
+      <table className="tableCategory">
         <thead>
           <tr>
             <th>Nombre</th>

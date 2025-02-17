@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
-import "./css/FixedCostsTable.css";
 
 export default function FixedCostsTable() {
   const [expenses, setExpenses] = useState([
@@ -41,34 +40,7 @@ export default function FixedCostsTable() {
     <div className="expense-box">
       <h2>Gastos Fijos</h2>
 
-      {/* Formulario para agregar gastos */}
-      <div className="form">
-        <input
-          type="text"
-          name="name"
-          placeholder="Nombre del gasto"
-          value={newExpense.name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="category"
-          placeholder="Categoría (Ej: Vivienda, Transporte...)"
-          value={newExpense.category}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="amount"
-          placeholder="Monto ($)"
-          value={newExpense.amount}
-          onChange={handleChange}
-        />
-        <button onClick={addExpense}>Agregar Gasto</button>
-      </div>
-
-      {/* Tabla de gastos */}
-      <table className="expense-table">
+      <table className="tableCategory">
         <thead>
           <tr>
             <th>Nombre</th>

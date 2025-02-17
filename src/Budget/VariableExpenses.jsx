@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
-import "./css/VariableExpenses.css";
 
 export default function VariableExpenses() {
   const [expenses, setExpenses] = useState([
@@ -59,40 +58,7 @@ export default function VariableExpenses() {
     <div className="expense-box">
       <h2>Gastos Variables</h2>
 
-      <div className="form">
-        <input
-          type="text"
-          name="name"
-          placeholder="Nombre del gasto"
-          value={newExpense.name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="category"
-          placeholder="Categoría (Ej: Entretenimiento, Transporte...)"
-          value={newExpense.category}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="amount"
-          placeholder="Monto ($)"
-          value={newExpense.amount}
-          onChange={handleChange}
-        />
-        <input
-          type="date"
-          name="date"
-          value={newExpense.date}
-          onChange={handleChange}
-        />
-        <button className="btnAddVariableExpenses" onClick={addExpense}>
-          Agregar Gasto
-        </button>
-      </div>
-
-      <table className="expense-table">
+      <table className="tableCategory">
         <thead>
           <tr>
             <th>Nombre</th>
