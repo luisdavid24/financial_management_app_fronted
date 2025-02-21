@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
+import { MdOutlineAddCircle } from "react-icons/md";
 
 export default function FixedCostsTable() {
   const [expenses, setExpenses] = useState([
@@ -38,7 +39,10 @@ export default function FixedCostsTable() {
 
   return (
     <div className="expense-box">
-      <h2>Gastos Fijos</h2>
+      <div className="containerIconCategory">
+        <h2>Gastos Fijos</h2>
+        <MdOutlineAddCircle />
+      </div>
 
       <table className="tableCategory">
         <thead>

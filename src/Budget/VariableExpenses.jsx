@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
+import { MdOutlineAddCircle } from "react-icons/md";
 
 export default function VariableExpenses() {
   const [expenses, setExpenses] = useState([
@@ -56,7 +57,10 @@ export default function VariableExpenses() {
 
   return (
     <div className="expense-box">
-      <h2>Gastos Variables</h2>
+      <div className="containerIconCategory">
+        <h2>Gastos Variables</h2>
+        <MdOutlineAddCircle />
+      </div>
 
       <table className="tableCategory">
         <thead>
