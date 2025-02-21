@@ -40,17 +40,17 @@ export default function FixedCostsTable() {
   return (
     <div className="expense-box">
       <div className="containerIconCategory">
-        <h2>Gastos Fijos</h2>
+        <h2>Fixed Expenses</h2>
         <MdOutlineAddCircle />
       </div>
 
       <table className="tableCategory">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Monto ($)</th>
-            <th>Acciones</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Amount ($)</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -68,7 +68,7 @@ export default function FixedCostsTable() {
         </tbody>
         <tfoot>
           <tr>
-            <th colSpan="2">Total Gastos:</th>
+            <th colSpan="2">Total Expenses:</th>
             <th>
               $
               {expenses

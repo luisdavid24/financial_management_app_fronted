@@ -7,23 +7,23 @@ export default function UnforeseenEvents() {
   return (
     <div>
       <div className="containerIconCategory">
-        <h2>Deudas y obligaciones</h2>
+        <h2>Debts and obligations</h2>
         <MdOutlineAddCircle />
       </div>
 
       <table className="tableCategory">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Monto ($)</th>
-            <th>Acciones</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Amount ($)</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody></tbody>
         <tfoot>
           <tr>
-            <th colSpan="2">Total Gastos:</th>
+            <th colSpan="2">Total Expenses:</th>
             <th></th>
             <th></th>
           </tr>

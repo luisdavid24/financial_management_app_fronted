@@ -58,18 +58,17 @@ export default function VariableExpenses() {
   return (
     <div className="expense-box">
       <div className="containerIconCategory">
-        <h2>Gastos Variables</h2>
+        <h2>Variable Expenses</h2>
         <MdOutlineAddCircle />
       </div>
 
       <table className="tableCategory">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Monto ($)</th>
-            <th>Fecha</th>
-            <th>Acciones</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Amount ($)</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -77,7 +76,6 @@ export default function VariableExpenses() {
             <tr key={expense.id}>
               <td>{expense.name}</td>
               <td>{expense.category}</td>
-              <td>${expense.amount.toLocaleString()}</td>
               <td>{expense.date}</td>
               <td>
                 <CiEdit />

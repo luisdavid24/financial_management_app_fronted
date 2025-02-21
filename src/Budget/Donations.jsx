@@ -7,17 +7,17 @@ export default function Donations() {
   return (
     <div>
       <div className="containerIconCategory">
-        <h2>Donaciones</h2>
+        <h2>Donations</h2>
         <MdOutlineAddCircle />
       </div>
 
       <table className="tableCategory">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Monto ($)</th>
-            <th>Acciones</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Amount ($)</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody></tbody>

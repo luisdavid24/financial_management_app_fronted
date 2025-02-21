@@ -59,18 +59,18 @@ export default function AssetsTable() {
   return (
     <div className="budget-box">
       <div className="containerIconCategory">
-        <h2>Gestión de Activos</h2>
+        <h2>Asset Management</h2>
         <MdOutlineAddCircle />
       </div>
 
       <table className="tableCategory">
         <thead>
           <tr>
-            <th>Nombre</th>
+            <th>Name</th>
 
-            <th>Saldo Inicial ($)</th>
-            <th>Saldo Disponible ($)</th>
-            <th>Acciones</th>
+            <th>Opening balance ($)</th>
+            <th>Available Balance ($)</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
