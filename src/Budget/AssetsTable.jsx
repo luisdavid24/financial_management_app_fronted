@@ -1,60 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import { MdOutlineAddCircle } from "react-icons/md";
 
 export default function AssetsTable() {
-  const [assets, setAssets] = useState([
-    {
-      id: 1,
-      name: "Cuenta de Ahorros",
-      initialBalance: 5000,
-      availableBalance: 4500,
-    },
-    {
-      id: 2,
-      name: "Inversiones",
-      initialBalance: 10000,
-      availableBalance: 10500,
-    },
-  ]);
+  const [data, setData] = useState([]);
 
-  const [newAsset, setNewAsset] = useState({
-    name: "",
-    type: "",
-    initialBalance: "",
-    availableBalance: "",
-  });
-
-  const handleChange = (e) => {
-    setNewAsset({ ...newAsset, [e.target.name]: e.target.value });
-  };
-
-  // Agregar activo
-  const addAsset = () => {
-    if (
-      !newAsset.name ||
-      !newAsset.type ||
-      !newAsset.initialBalance ||
-      !newAsset.availableBalance
-    )
-      return;
-
-    const newAssetData = {
-      id: assets.length + 1,
-      ...newAsset,
-      initialBalance: parseFloat(newAsset.initialBalance),
-      availableBalance: parseFloat(newAsset.availableBalance),
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          "http://localhost:3001/api/v1/registryRouter/Asset Management"
+        );
+        const data = await res.json();
+        setData(data);
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      }
     };
 
-    setAssets([...assets, newAssetData]);
-    setNewAsset({
-      name: "",
-      type: "",
-      initialBalance: "",
-      availableBalance: "",
-    });
-  };
+    fetchData();
+  }, []);
 
   return (
     <div className="budget-box">
@@ -74,11 +40,11 @@ export default function AssetsTable() {
           </tr>
         </thead>
         <tbody>
-          {assets.map((asset) => (
+          {data.map((asset) => (
             <tr key={asset.id}>
               <td>{asset.name}</td>
-              <td>{asset.initialBalance.toLocaleString()}</td>
-              <td>{asset.availableBalance.toLocaleString()}</td>
+              <td>{asset.opening_balance}</td>
+              <td>{asset.available_balance}</td>
               <td>
                 <CiEdit />
                 <MdDelete />
