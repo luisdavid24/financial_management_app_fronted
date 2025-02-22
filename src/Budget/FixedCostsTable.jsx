@@ -1,41 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import { MdOutlineAddCircle } from "react-icons/md";
 
 export default function FixedCostsTable() {
-  const [expenses, setExpenses] = useState([
-    { id: 1, name: "Alquiler", category: "Vivienda", amount: 500 },
-    { id: 2, name: "Internet", category: "Servicios", amount: 50 },
-  ]);
+  const [data, setData] = useState([]);
 
-  const [newExpense, setNewExpense] = useState({
-    name: "",
-    category: "",
-    amount: "",
-  });
-
-  const handleChange = (e) => {
-    setNewExpense({ ...newExpense, [e.target.name]: e.target.value });
-  };
-
-  const addExpense = () => {
-    if (!newExpense.name || !newExpense.category || !newExpense.amount) return;
-
-    const newExpenseData = {
-      id: expenses.length + 1,
-      ...newExpense,
-      amount: parseFloat(newExpense.amount),
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          "http://localhost:3001/api/v1/registryRouter/Fixed Expenses"
+        );
+        const data = await res.json();
+        setData(data);
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      }
     };
 
-    setExpenses([...expenses, newExpenseData]);
-    setNewExpense({ name: "", category: "", amount: "" });
-  };
-
-  // Eliminar gasto
-  const removeExpense = (id) => {
-    setExpenses(expenses.filter((expense) => expense.id !== id));
-  };
+    fetchData();
+  }, []);
 
   return (
     <div className="expense-box">
@@ -54,11 +39,11 @@ export default function FixedCostsTable() {
           </tr>
         </thead>
         <tbody>
-          {expenses.map((expense) => (
-            <tr key={expense.id}>
-              <td>{expense.name}</td>
-              <td>{expense.category}</td>
-              <td>{expense.amount.toLocaleString()}</td>
+          {data.map((asset) => (
+            <tr key={asset.id}>
+              <td>{asset.name}</td>
+              <td>{asset.opening_balance}</td>
+              <td>{asset.available_balance}</td>
               <td>
                 <CiEdit />
                 <MdDelete />
@@ -69,12 +54,7 @@ export default function FixedCostsTable() {
         <tfoot>
           <tr>
             <th colSpan="2">Total Expenses:</th>
-            <th>
-              $
-              {expenses
-                .reduce((sum, expense) => sum + expense.amount, 0)
-                .toLocaleString()}
-            </th>
+            <th></th>
             <th></th>
           </tr>
         </tfoot>
