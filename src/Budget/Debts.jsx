@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import { MdOutlineAddCircle } from "react-icons/md";
 
 export default function Debts() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          "http://localhost:3001/api/v1/registryRouter/Debts and obligations"
+        );
+        const data = await res.json();
+        setData(data);
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div>
       <div className="containerIconCategory">
@@ -20,7 +37,19 @@ export default function Debts() {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          {data.map((asset) => (
+            <tr key={asset.id}>
+              <td>{asset.name}</td>
+              <td>{asset.opening_balance}</td>
+              <td>{asset.available_balance}</td>
+              <td>
+                <CiEdit />
+                <MdDelete />
+              </td>
+            </tr>
+          ))}
+        </tbody>
         <tfoot>
           <tr>
             <th colSpan="2">Total Expenses:</th>
