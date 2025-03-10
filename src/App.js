@@ -25,9 +25,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={user ? <Navigate to="/protected" /> : <Login setUser={setUser} />} />
-        <Route path="/protected" element={user ? <ProtectedPage user={user} /> : <Navigate to="/" />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={user ? <Navigate to="/Home" /> : <Login setUser={setUser} />} />
+        <Route path="/Home" element={user ? <Home  /> : <Navigate to="/" />} />
         <Route path="/Budget" element={<Budget />} />
         <Route path="/Report" element={<Report />} />
       </Routes>

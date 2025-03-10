@@ -6,6 +6,8 @@ import "./Login.css";
 export default function Login({ setUser }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [name, setName] = useState('')
+
   const [isLogin, setIsLogin] = useState(true)
   const [error, setError] = useState(null)
 
@@ -15,7 +17,7 @@ export default function Login({ setUser }) {
     try {
       const user = isLogin
         ? await login(username, password)
-        : await register(username, password)
+        : await register(name,username, password)
       setUser(user)
     } catch (err) {
       setError(err.response?.data?.error || 'Error')
@@ -27,6 +29,14 @@ export default function Login({ setUser }) {
       <h2>{isLogin ? 'Login' : 'Register'}</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
+        {!isLogin &&
+           <input
+           type="text"
+           placeholder="Name"
+           value={name}
+           onChange={(e) => setName(e.target.value)}
+         />
+        }
         <input
           type="text"
           placeholder="Username"
@@ -39,6 +49,7 @@ export default function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        
         <button type="submit">{isLogin ? 'Login' : 'Register'}</button>
       </form>
       <button onClick={() => setIsLogin(!isLogin)}>
