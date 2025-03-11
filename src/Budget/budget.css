@@ -1,0 +1,97 @@
+.budget-container {
+  max-width: 900px;
+  margin-top: 500px;
+  padding: 20px;
+}
+
+.budget-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1E88E5;
+  margin-bottom: 1.5rem;
+}
+
+/* Selector de mes */
+.month-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 10px;
+}
+
+.month-selector label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.month-selector select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 2px solid #1E88E5;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+.month-selector select:hover {
+  background: #e3f2fd;
+}
+
+/* Tablas */
+.table-section {
+  margin-bottom: 2rem;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  color: #1E88E5;
+  margin-bottom: 0.5rem;
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.budget-table th, .budget-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.budget-table th {
+  background: #1E88E5;
+  color: white;
+}
+
+.budget-table tr:hover {
+  background: #e3f2fd;
+}
+
+/* Botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background: #ffcc00;
+  color: black;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+}

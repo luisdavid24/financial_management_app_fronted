@@ -8,9 +8,6 @@ import Report from "./Report";
 import Login from "./Login/";
 
 
-function ProtectedPage({ user }) {
-  return <h2>Welcome, {user.username}</h2>
-}
 
 function App() {
   const [user, setUser] = useState(null)
