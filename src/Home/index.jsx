@@ -1,18 +1,29 @@
 import React from "react";
+import { useState, useEffect } from 'react'
+
 import "./Home.css";
 
 const Home = () => {
+  const [name,setName]=useState("");
+
+  useEffect(() => {
+    
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/api/v1/users");
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error("Error al obtener los datos:", error);
+      } 
+    };
+
+    fetchUsers(); // Llamar a la función
+    
+  },[name]);
+
   return (
     <div className="container">
-      {/* <nav className="navbar">
-        <h1 className="logo">FinancePro</h1>
-        <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Budget</a></li>
-          <li><a href="#">Reports</a></li>
-        </ul>
-      </nav>
- */}
       <header className="hero">
         <h2>Simple. Smart. Financial Control.</h2>
         <p>Track your expenses, plan budgets, and gain financial freedom.</p>

@@ -2,23 +2,6 @@ import React, { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import "./budget.css";
 
-/*  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(
-          "http://localhost:3001/api/v1/registryRouter/Asset Management"
-        );
-        const data = await res.json();
-        setData(data);
-      } catch (error) {
-        console.error("Error al obtener los datos:", error);
-      }
-    };
-
-    fetchData();
-  }, []); */
 
 const months = [
   "January", "February", "March", "April", "May", "June",
@@ -90,7 +73,6 @@ const Budget = () => {
     <div className="budget-container">
       <h1 className="budget-title">Budget Overview</h1>
 
-      {/* Selector de Mes */}
       <div className="month-selector">
         <label>Choose Month: </label>
         <select value={selectedMonth} onChange={(e) => setSelectedMonth(e.target.value)}>
@@ -102,7 +84,6 @@ const Budget = () => {
         </select>
       </div>
 
-      {/* Tablas de Presupuesto */}
       {categories.map((category, index) => (
         <div key={index} className="table-section">
           <h2 className="table-title">{category}</h2>

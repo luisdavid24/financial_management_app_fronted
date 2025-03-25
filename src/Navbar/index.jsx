@@ -1,8 +1,12 @@
 import React from "react";
+import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { SlLogin } from "react-icons/sl";
+import { logout, getProtected } from '../Login/api'
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({user, setUser}) => {
+  
   return (
     <nav className="navbar">
       <h2 className="logo">FinancePro</h2>
@@ -15,6 +19,9 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/Report">Report</Link>
+        </li>
+        <li>
+          <SlLogin className="btnLogin" onClick={() => { logout(); setUser(null) }}/>
         </li>
       </ul>
     </nav>

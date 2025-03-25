@@ -49,3 +49,10 @@ body {
   color: #E76F51; 
   transform: scale(1.1);
 }
+.btnLogin{
+  cursor: pointer;
+  color:white;
+}
+.btnLogin :hover{
+  color: #E76F51; 
+}
