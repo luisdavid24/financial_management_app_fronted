@@ -1,8 +1,7 @@
 import React from "react";
-import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { SlLogin } from "react-icons/sl";
-import { logout, getProtected } from '../Login/api'
+import { logout } from '../Login/api'
 import "./Navbar.css";
 
 const Navbar = ({user, setUser}) => {

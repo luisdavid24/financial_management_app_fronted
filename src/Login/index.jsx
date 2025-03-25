@@ -22,7 +22,7 @@ export default function Login({ setUser }) {
           : await register(formData.name, formData.username, formData.password);
         
         setUser(user);
-        setFormData(initialFormState); // 🔹 Limpia los campos después de enviar
+        setFormData(initialFormState); 
       } catch (err) {
         setError(err.response?.data?.error || "Error");
       }

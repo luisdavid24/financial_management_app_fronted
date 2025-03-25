@@ -4,23 +4,7 @@ import { useState, useEffect } from 'react'
 import "./Home.css";
 
 const Home = () => {
-  const [name,setName]=useState("");
-
-  useEffect(() => {
-    
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/api/v1/users");
-        const data = await response.json();
-        console.log(data);
-      } catch (error) {
-        console.error("Error al obtener los datos:", error);
-      } 
-    };
-
-    fetchUsers(); // Llamar a la función
-    
-  },[name]);
+  
 
   return (
     <div className="container">
@@ -45,9 +29,7 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className="footer">
-        <p>© 2025 FinancePro</p>
-      </footer>
+     
     </div>
   );
 };

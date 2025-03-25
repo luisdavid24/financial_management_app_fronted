@@ -45,13 +45,6 @@
   margin-top: 20px;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-weight: bold;
-  color: #555;
-}
 
 .modal-input, .custom-select {
   width: 100%;

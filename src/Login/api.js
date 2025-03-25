@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:3001/api/v1/users'
 
 export const api = axios.create({
   baseURL: API_URL,
-  withCredentials: true // Necesario para cookies
+  withCredentials: true 
 })
 
 export const login = async (username, password) => {
@@ -25,3 +25,4 @@ export const getProtected = async () => {
   const { data } = await api.get('/protected')
   return data
 }
+

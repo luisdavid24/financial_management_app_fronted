@@ -6,17 +6,11 @@ import Navbar from "./Navbar";
 import Budget from "./Budget";
 import Report from "./Report";
 import Login from "./Login/";
-
-
+import Footer from "./Footer"
+import "./App.css"
 
 function App() {
   const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    getProtected()
-      .then(setUser)
-      .catch(() => setUser(null))
-  }, [])
 
   return (
     <>
@@ -27,6 +21,7 @@ function App() {
         <Route path="/Budget" element={user ? <Budget />: <Navigate to="/" />} />
         <Route path="/Report" element={user ? <Report />: <Navigate to="/" />} />
       </Routes>
+      {user && <Footer/> }
     </>
   );
 }
