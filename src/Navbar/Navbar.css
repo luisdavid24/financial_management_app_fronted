@@ -49,10 +49,10 @@ body {
   color: #E76F51; 
   transform: scale(1.1);
 }
-.btnLogin{
+.btnLoginNav{
   cursor: pointer;
   color:white;
 }
-.btnLogin :hover{
+.btnLoginNav :hover{
   color: #E76F51; 
 }

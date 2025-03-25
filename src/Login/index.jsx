@@ -64,10 +64,10 @@ export default function Login({ setUser }) {
             onChange={handleChange}
           />
 
-          <button type="submit">{isLogin ? "Login" : "Register"}</button>
+          <button className="btnLogin" type="submit">{isLogin ? "Login" : "Register"}</button>
         </form>
 
-        <button className="toggle-btn" onClick={() => setIsLogin(!isLogin)}>
+        <button className="toggle-btn btnLogin"  onClick={() => setIsLogin(!isLogin)}>
           {isLogin ? "Create an account" : "Already have an account?"}
         </button>
       </div>

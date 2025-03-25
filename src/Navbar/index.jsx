@@ -21,7 +21,7 @@ const Navbar = ({user, setUser}) => {
           <Link to="/Report">Report</Link>
         </li>
         <li>
-          <SlLogin className="btnLogin" onClick={() => { logout(); setUser(null) }}/>
+          <SlLogin className="btnLoginNav" onClick={() => { logout(); setUser(null) }}/>
         </li>
       </ul>
     </nav>

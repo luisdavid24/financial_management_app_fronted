@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import "./budget.css";
+import Modal from './Modal';
+import "./css/budget.css";
 
 
 const months = [
@@ -68,10 +69,16 @@ const initialBudgets = {
 
 const Budget = () => {
   const [selectedMonth, setSelectedMonth] = useState("2025-01");
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="budget-container">
       <h1 className="budget-title">Budget Overview</h1>
+
+      <div className="App">
+        <button className="btnBudgetNew" onClick={() => setModalOpen(true)}>Create a new Budget</button>
+        <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} className="btnModalBuget" />
+      </div>
 
       <div className="month-selector">
         <label>Choose Month: </label>
@@ -84,7 +91,7 @@ const Budget = () => {
         </select>
       </div>
 
-      {categories.map((category, index) => (
+      {/* {categories.map((category, index) => (
         <div key={index} className="table-section">
           <h2 className="table-title">{category}</h2>
           <table className="budget-table">
@@ -111,7 +118,8 @@ const Budget = () => {
             </tbody>
           </table>
         </div>
-      ))}
+      ))} */}
+      
     </div>
   );
 };
